@@ -1,7 +1,7 @@
 const bcrypt = require("bcryptjs");
 const User = require("../model/User");
-// const dbErrorHelper = require("../authHelpers/dbErrorHelper");
-// const jwtHelper = require("../authHelpers/jwtHelper");
+const dbErrorHelper = require("../authHelpers/dbErrorHelper");
+const jwtHelper = require("../authHelpers/jwtHelper");
 
 module.exports = {
   createuser: async (req, res) => {
