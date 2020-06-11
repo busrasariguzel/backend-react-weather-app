@@ -3,9 +3,25 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const mongoose = require('mongoose')
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var usersRouter = require('./routes/users/Users');
+
+
+
+require("dotenv").config();
+
+mongoose
+  .connect(process.env.MONGO_DB, {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log("DB connection success!"))
+  .catch((e) => console.log(e));
+
 
 var app = express();
 
