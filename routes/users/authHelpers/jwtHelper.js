@@ -4,7 +4,7 @@ const expressJwt = require('express-jwt')
 const config = require('./jwtConfig')
 const User = require('../model/User')
 
-async function comparePassword(incomingPassword, userPassword) {
+const comparePassword = async (incomingPassword, userPassword)  => {
     try {
         let comparedPassword = await bcrypt.compare(incomingPassword, userPassword);
 
