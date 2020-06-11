@@ -24,7 +24,7 @@ const UserSchema = new mongoose.Schema({
     type: String,
     default: now.format("dddd, MMMM Do YYYY, h:mm:ss a"),
   },
-  expenses: [{ type: mongoose.Schema.ObjectId, ref: "Expense" }],
+
 });
 
 module.exports = mongoose.model("User", UserSchema);
