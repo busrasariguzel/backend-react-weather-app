@@ -16,6 +16,7 @@
     "express-jwt": "^5.3.3",
     "http-errors": "~1.6.3",
     "jsonwebtoken": "^8.5.1",
+    "mapbox-gl": "^1.11.0",
     "moment": "^2.26.0",
     "mongoose": "^5.9.18",
     "morgan": "~1.9.1"
